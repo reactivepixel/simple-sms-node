@@ -28,7 +28,16 @@ app.get('/sms/send', function(req, res){
 });
 
 app.post('/sms/receive', function(req, res){
-  console.log(req.body);
+  var twiml = new twilio.TwimlResponse();
+
+  if(req.body.Body === '1'{
+    // do some logic to sign them up
+    twiml.message('Thanks for signing up!!');
+  } else {
+    twiml.message('I didn\'t understand the command');
+  }
+  console.log("sending info to twilio", twiml.toString());
+  res.send(twiml.toString())
 });
 
 
