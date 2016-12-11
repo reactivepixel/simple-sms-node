@@ -30,7 +30,7 @@ app.get('/sms/send', function(req, res){
 app.post('/sms/receive', function(req, res){
   var twiml = new twilio.TwimlResponse();
 
-  if(req.body.Body === '1'{
+  if(req.body.Body === '1'){
     // do some logic to sign them up
     twiml.message('Thanks for signing up!!');
   } else {
