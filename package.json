@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Chapman",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "twilio": "^2.11.1"
+  }
 }
